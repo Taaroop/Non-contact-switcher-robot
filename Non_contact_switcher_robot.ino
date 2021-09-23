@@ -26,7 +26,7 @@ void loop() {
   digitalWrite(trigPin,HIGH); // sends the high pulse (high pulse sandwiched between low pulses to ensure a clear high pulse)
   delayMicroseconds(10);
   digitalWrite(trigPin,LOW);
-  duration = pulseIn(echoPin,HIGH); // measures the time taken for the pulse to reach the object and come back 
+  duration = pulseIn(echoPin,HIGH); // measures the time taken for the pulse (high) to reach the object and come back 
   duration = duration/2; // actual duration is half, as the pulse covered the distance two times 
   distance = 0.033*duration; // see calculations at the end of the code
   Serial.println(distance); // in cm
